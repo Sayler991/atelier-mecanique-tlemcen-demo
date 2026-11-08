@@ -1,0 +1,35 @@
+{
+  "time": "2026-11-08T14:48:07.299Z",
+  "scope": "Real Supabase HTTP API, publishable key only; no signed-in credentials",
+  "results": [
+    {
+      "name": "anonymous public read",
+      "status": 200
+    },
+    {
+      "name": "anonymous update rejected",
+      "status": 401
+    },
+    {
+      "name": "anonymous insert rejected",
+      "status": 401
+    },
+    {
+      "name": "anonymous delete rejected",
+      "status": 401
+    },
+    {
+      "name": "anonymous owner list rejected",
+      "status": 401
+    },
+    {
+      "name": "anonymous membership addition rejected",
+      "status": 401
+    },
+    {
+      "name": "public reload confirms row intact",
+      "status": 200
+    }
+  ],
+  "passed": 7
+}

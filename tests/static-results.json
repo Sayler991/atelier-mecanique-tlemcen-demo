@@ -1,0 +1,13 @@
+{
+  "scope": "Static files and local HTTP server, NOT visual browser testing",
+  "results": [
+    "index.html: IDs uniques et fichiers liés présents",
+    "docs/sources.html: IDs uniques et fichiers liés présents",
+    "admin/index.html: IDs uniques et fichiers liés présents",
+    "SVG : XML valide",
+    "8 routes statiques HTTP 200 ; en-têtes CSP/nosniff présents",
+    "Règles mobile et mouvement réduit présentes (contrôle statique, pas test visuel)"
+  ],
+  "passed": 6,
+  "webBytes": 62893
+}

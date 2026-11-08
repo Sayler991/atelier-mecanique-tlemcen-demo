@@ -1,0 +1,15 @@
+{
+  "scope": "Unit tests in jsdom, NOT browser E2E; auth/API mocked",
+  "passed": 9,
+  "results": [
+    "Vitrine : rendu de 2 prestations, 7 jours, galerie masquée, contenu chargé",
+    "Bouton de pause fonctionnel dans le DOM",
+    "Admin simulé : connexion, contrôle membre, chargement et effacement du champ secret",
+    "Admin simulé : modification et sauvegarde incrémentent la version",
+    "Vitrine simulée rechargée : nouvelle valeur issue du même stockage simulé",
+    "Conflit de version affiché sans écrasement",
+    "Compte non membre refusé par le contrôle de l’interface (API simulée)",
+    "Données hostiles : HTML affiché comme texte, liens dangereux et photo externe masqués",
+    "Hors ligne : contenu de secours et avertissement explicite"
+  ]
+}

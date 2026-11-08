@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Les pages de cette maquette portent toutes noindex,nofollow.
