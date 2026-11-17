@@ -272,3 +272,12 @@ h2{font-size:clamp(38px,5vw,72px)}
 .hero-emblem,.hero-emblem.hero-in{display:block;position:relative;right:auto;top:auto;translate:none;width:clamp(84px,8vw,118px);margin-bottom:clamp(26px,3vw,38px)}
 .emblem-ring{inset:-10px}
 @media(max-width:1180px){.hero-emblem{display:block}}
+
+/* ===== v2.3 : logo en couleurs pleines (aucun filtre / opacité / fusion) ===== */
+:root{color-scheme:dark}
+.brand-logo,.hero-emblem,.contact-logo,.brand-logo img,.hero-emblem img{opacity:1!important;filter:none!important;mix-blend-mode:normal!important;-webkit-filter:none!important}
+.brand-logo{background:#0a0a0a;padding:0;border:1px solid #3a3a40;box-shadow:none}
+.hero-emblem img,.contact-logo{box-shadow:0 0 0 1px #3a3a40,0 24px 50px -24px #000}
+.emblem-ring{border-color:#2e2e33;border-top-color:var(--red)}
+.hero-emblem{animation:emblemIn 1s .9s var(--ease) both}
+@keyframes emblemIn{from{transform:translateY(24px) scale(.92)}to{transform:none}}
