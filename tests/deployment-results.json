@@ -1,0 +1,63 @@
+{
+  "verifiedAtAlgiers": "2026-11-08T15:54:52.872206+01:00",
+  "url": "https://sayler991.github.io/atelier-mecanique-tlemcen-demo/",
+  "scope": "Real public HTTP routes and exact asset hashes, not browser rendering",
+  "passed": 11,
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "admin/",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "site.js",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "config.js",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "admin/admin.js",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "admin/admin.css",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "assets/automobile.svg",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "docs/sources.html",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "matchesLocal": true
+    },
+    {
+      "path": "Supabase CORS for Pages origin",
+      "status": 200,
+      "cors": "https://sayler991.github.io"
+    }
+  ]
+}

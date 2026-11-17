@@ -1,0 +1,22 @@
+{
+  "source": "Rapport computerUse transmis par le parent",
+  "receivedAtAlgiers": "2026-11-08T16:06:00+01:00",
+  "browser": "Chrome",
+  "navigation": "file://",
+  "desktop": "sans débordement visible",
+  "mobileWidthPx": 390,
+  "mobile": "sans débordement visible",
+  "admin": "écran de connexion responsive, sans login",
+  "pauseResume": true,
+  "anchors": true,
+  "faq": true,
+  "screens": [
+    "screens/desktop.png",
+    "screens/mobile.png",
+    "screens/admin.png"
+  ],
+  "localhost": "ERR_CONNECTION_REFUSED malgré port signalé occupé",
+  "ownerLoginTested": false,
+  "ownerE2ETested": false,
+  "physicalPhoneTested": false
+}
