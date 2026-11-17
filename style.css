@@ -274,10 +274,22 @@ h2{font-size:clamp(38px,5vw,72px)}
 @media(max-width:1180px){.hero-emblem{display:block}}
 
 /* ===== v2.3 : logo en couleurs pleines (aucun filtre / opacité / fusion) ===== */
-:root{color-scheme:dark}
+:root,html,body{color-scheme:only dark}
 .brand-logo,.hero-emblem,.contact-logo,.brand-logo img,.hero-emblem img{opacity:1!important;filter:none!important;mix-blend-mode:normal!important;-webkit-filter:none!important}
 .brand-logo{background:#0a0a0a;padding:0;border:1px solid #3a3a40;box-shadow:none}
 .hero-emblem img,.contact-logo{box-shadow:0 0 0 1px #3a3a40,0 24px 50px -24px #000}
 .emblem-ring{border-color:#2e2e33;border-top-color:var(--red)}
 .hero-emblem{animation:emblemIn 1s .9s var(--ease) both}
 @keyframes emblemIn{from{transform:translateY(24px) scale(.92)}to{transform:none}}
+
+/* ===== v2.4 : protection du rouge sous le mode sombre forcé de Samsung Internet =====
+   Les dégradés (background-image) et le canvas ne sont pas recolorés par le mode sombre forcé,
+   contrairement aux couleurs de texte/fond et aux images de type icône. Rendu identique ailleurs. */
+.brand-logo canvas,.hero-emblem canvas{display:block;width:100%;height:100%;border-radius:50%}
+.hero-emblem canvas{position:relative;box-shadow:0 0 0 1px #3a3a40,0 24px 50px -24px #000}
+canvas.contact-logo{display:block}
+.sb-fix .brand small,.sb-fix .demo-banner strong,.sb-fix .hero-title .line:last-child>span,.sb-fix h2 em,.sb-fix .stat b,.sb-fix .card small,.sb-fix .hour-row.today,.sb-fix .step span,.sb-fix .marquee-track i{color:transparent!important;-webkit-text-fill-color:transparent;background-image:linear-gradient(var(--red2),var(--red2));-webkit-background-clip:text;background-clip:text}
+.sb-fix .hero-title .line:last-child>span,.sb-fix h2 em,.sb-fix .stat b,.sb-fix .hour-row.today,.sb-fix .marquee-track i{background-image:linear-gradient(var(--red),var(--red))}
+.sb-fix .btn-red,.sb-fix .mobile-bar .phone-link,.sb-fix .pulse,.sb-fix .kicker::before,.sb-fix .draw::after,.sb-fix .service-card::after,.sb-fix nav a::after,.sb-fix .link-line::after,.sb-fix .checks li::before,.sb-fix .scroll-cue i{background-image:linear-gradient(var(--red),var(--red))}
+.sb-fix .btn-red:hover{background-image:linear-gradient(var(--red2),var(--red2))}
+.sb-fix .pulse,.sb-fix .scroll-cue i{background-image:linear-gradient(var(--red2),var(--red2))}

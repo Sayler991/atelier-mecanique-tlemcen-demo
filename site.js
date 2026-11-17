@@ -1,6 +1,16 @@
 'use strict';
 (()=>{
  document.documentElement.classList.add('js');
+ /* Détection du mode sombre forcé (Chrome/Samsung) : élément témoin "canvas" en schéma clair */
+ try{const t=document.createElement('div');t.style.cssText='';t.style.display='none';t.style.backgroundColor='canvas';t.style.colorScheme='light';document.documentElement.append(t);const bg=getComputedStyle(t).backgroundColor;t.remove();if(bg&&bg!=='rgb(255, 255, 255)')document.documentElement.classList.add('force-dark')}catch{}
+ /* Samsung Internet (mode sombre forcé, indétectable dans certaines versions) : on protège les rouges et le logo */
+ const SB=/SamsungBrowser/i.test(navigator.userAgent)||document.documentElement.classList.contains('force-dark');
+ if(SB){document.documentElement.classList.add('sb-fix');
+  document.querySelectorAll('.brand-logo img,.hero-emblem img,img.contact-logo').forEach(img=>{const cv=document.createElement('canvas');cv.className=img.className;cv.setAttribute('aria-hidden','true');if(img.alt){cv.setAttribute('role','img');cv.setAttribute('aria-label',img.alt);cv.removeAttribute('aria-hidden')}
+   const src=new Image();src.decoding='async';src.src=(img.currentSrc||img.src).replace(/logo-(256|512)-plein/,'logo-1024-plein');
+   const draw=()=>{const box=img.isConnected?img:cv,r=box.getBoundingClientRect(),d=Math.min(3,Math.max(1,window.devicePixelRatio||1)),n=Math.max(64,Math.round(Math.max(r.width,r.height,48)*d));cv.width=n;cv.height=n;const x=cv.getContext('2d');x.imageSmoothingEnabled=true;x.imageSmoothingQuality='high';x.drawImage(src,0,0,n,n);if(img.isConnected)img.replaceWith(cv)};
+   src.addEventListener('load',()=>requestAnimationFrame(draw),{once:true})})}
+
  const CFG=window.ATELIER_CONFIG,D=window.ATELIER_DEFAULT,$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
  const RM=matchMedia('(prefers-reduced-motion: reduce)'),FINE=matchMedia('(hover:hover) and (pointer:fine)'),MOBILE=matchMedia('(max-width:760px)');
  const el=(tag,text,cls)=>{let e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e};

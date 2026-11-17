@@ -2,6 +2,10 @@
 
 Deux surfaces livrées : une vitrine responsive et un véritable client d’administration relié à Supabase Auth, PostgREST et Storage. **Le compte nominatif du propriétaire reste à activer** ; aucun compte arbitraire, mot de passe partagé ou contournement de connexion n’a été créé.
 
+## Correctif Samsung Internet (mode sombre forcé) — v2.4
+
+Samsung Internet recolore les pages en mode sombre et ignore `color-scheme`. Correctif en couches, sans changement visuel ailleurs : `<meta name="color-scheme" content="only dark">` + `:root{color-scheme:only dark}`, `<meta name="darkreader-lock">`, détection du mode sombre forcé (élément témoin `canvas`) ; sur Samsung Internet (agent utilisateur `SamsungBrowser`) ou si le forçage est détecté, les rouges sont peints via des dégradés (`background-clip:text`) et les logos sont redessinés dans un `<canvas>`, deux rendus que le mode sombre forcé ne recolore pas (vérifié en émulation Chromium, pas sur un vrai Samsung). Logos opaques `assets/logo-*-plein.webp`. Cache : `?v=24`.
+
 ## Logo officiel — v2.2 (17 novembre 2026)
 
 Logo réel fourni par Younes (capture du profil), détouré en cercle et recoloré : zones bleues → rouge du thème (#e10600), zones blanches → noir. Fichiers : `logo_rouge_noir.png` (1400 px), `assets/logo-*.webp/png`, favicons `assets/favicon-*.png`. Utilisé dans l’en-tête, le hero, la section contact, le pied de page et comme favicon. La capture source n’est pas publiée.
