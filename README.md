@@ -2,6 +2,10 @@
 
 Deux surfaces livrées : une vitrine responsive et un véritable client d’administration relié à Supabase Auth, PostgREST et Storage. **Le compte nominatif du propriétaire reste à activer** ; aucun compte arbitraire, mot de passe partagé ou contournement de connexion n’a été créé.
 
+## Logo officiel — v2.2 (17 novembre 2026)
+
+Logo réel fourni par Younes (capture du profil), détouré en cercle et recoloré : zones bleues → rouge du thème (#e10600), zones blanches → noir. Fichiers : `logo_rouge_noir.png` (1400 px), `assets/logo-*.webp/png`, favicons `assets/favicon-*.png`. Utilisé dans l’en-tête, le hero, la section contact, le pied de page et comme favicon. La capture source n’est pas publiée.
+
 ## Refonte noir & rouge — v2 (17 novembre 2026)
 
 - Thème noir / anthracite et rouge, typographies Anton + Inter auto-hébergées, hero plein écran.

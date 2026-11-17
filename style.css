@@ -254,3 +254,21 @@ h2{font-size:clamp(38px,5vw,72px)}
 .faq summary{font-weight:500}
 .band-text p{-webkit-text-stroke:1px rgba(255,255,255,.75);letter-spacing:.02em}
 @media(max-width:760px){.mobile-bar a{border-radius:2px;text-transform:uppercase;letter-spacing:.14em;font-size:12px}.service-card{min-height:420px;padding:28px}.stat{padding:34px 24px}}
+
+/* ===== Logo officiel (recoloré rouge/noir) ===== */
+.brand-logo{display:block;width:46px;height:46px;border-radius:50%;padding:2px;background:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,.04));box-shadow:0 6px 22px -8px rgba(225,6,0,.65);flex-shrink:0;transition:transform .6s var(--ease)}
+.brand-logo img{width:100%;height:100%;border-radius:50%}
+.brand:hover .brand-logo{transform:rotate(-8deg) scale(1.04)}
+.hero-inner{position:relative}
+.hero-emblem{position:absolute;right:clamp(20px,5vw,64px);top:50%;width:clamp(220px,24vw,340px);aspect-ratio:1;translate:0 -58%}
+.hero-emblem img{position:relative;width:100%;height:100%;border-radius:50%;box-shadow:0 30px 80px -30px rgba(225,6,0,.55),0 0 0 1px rgba(255,255,255,.14)}
+.emblem-ring{position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(255,255,255,.14);border-top-color:var(--red);animation:spin 14s linear infinite}
+.loaded .hero-emblem.hero-in{transition-delay:.9s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.contact-logo{width:84px;height:84px;border-radius:50%;margin-bottom:28px;box-shadow:0 0 0 1px rgba(255,255,255,.16),0 16px 40px -16px rgba(225,6,0,.6)}
+.footer .brand-logo{width:54px;height:54px}
+@media(max-width:1180px){.hero-emblem{display:none}}
+@media(max-width:760px){.hero-emblem{display:block;position:relative;right:auto;top:auto;translate:none;width:84px;margin-bottom:26px}.emblem-ring{inset:-8px}.brand-logo{width:40px;height:40px}}
+.hero-emblem,.hero-emblem.hero-in{display:block;position:relative;right:auto;top:auto;translate:none;width:clamp(84px,8vw,118px);margin-bottom:clamp(26px,3vw,38px)}
+.emblem-ring{inset:-10px}
+@media(max-width:1180px){.hero-emblem{display:block}}
