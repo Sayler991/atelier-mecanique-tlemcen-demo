@@ -208,3 +208,49 @@ nav a:hover::after,.link-line:hover::after{transform:scaleX(1);transform-origin:
  .service-icon,.steps-line path{stroke-dashoffset:0}.draw::after{transform:scaleX(1)}
 }
 body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+
+/* ===== Finition haut de gamme ===== */
+body{font-size:16px;letter-spacing:.005em}
+h1,h2{letter-spacing:.012em;line-height:.98}
+h2{font-size:clamp(38px,5vw,72px)}
+.section{padding-block:clamp(110px,14vw,190px)}
+.section-head{margin-bottom:clamp(56px,7vw,90px)}
+.kicker{font-size:11px;font-weight:600;letter-spacing:.34em;color:#d8d4cf}.kicker::before{width:40px;height:1px;background:var(--red)}
+.hero .kicker{color:#e9e5e0}
+.btn{border-radius:2px;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:700;padding:20px 30px}
+.btn-sm{padding:13px 20px;font-size:11px}
+.btn-red{box-shadow:0 14px 34px -18px rgba(225,6,0,.9)}
+.btn-ghost{border-color:rgba(255,255,255,.32);background:transparent;backdrop-filter:none}
+.hero-title{font-size:clamp(56px,10vw,150px);letter-spacing:.015em}
+.hero-title .line:last-child>span{text-shadow:none;color:var(--red)}
+.lead{font-weight:300;font-size:clamp(17px,1.5vw,20px);line-height:1.7;color:#d4d0cb}
+.hero-meta{letter-spacing:.08em;text-transform:uppercase;font-size:11px}
+.hero-meta span{border-left:1px solid var(--red)}
+.hero-grid{opacity:.5}
+.marquee{background:var(--bg);transform:none;margin:0;border-block:1px solid var(--line);box-shadow:none}
+.marquee-track{font-size:clamp(26px,3vw,40px);padding:22px 0;gap:46px;color:transparent;-webkit-text-stroke:1px rgba(242,240,237,.35);animation-duration:40s}
+.marquee-track i{color:var(--red);-webkit-text-stroke:0;font-size:10px}
+.stats{border-radius:0;border-inline:0;margin-top:0;max-width:none;background:var(--line);padding:0}
+.stat{padding:clamp(40px,5vw,64px) clamp(24px,4vw,56px);flex-direction:column;align-items:flex-start;gap:14px}
+.stat b{font-size:clamp(72px,8vw,120px);text-shadow:none}
+.stat span{font-size:11px;letter-spacing:.22em;font-weight:500}
+.stats-note{padding:14px clamp(24px,4vw,56px);font-size:11px;letter-spacing:.04em}
+.service-card,.step,.card,.quote,.atelier-photo,.gallery figure{border-radius:4px}
+.service-card{min-height:520px;padding:44px}
+.service-card h3{letter-spacing:.02em}
+.service-number{-webkit-text-stroke:1px rgba(255,255,255,.45)}
+.service-card::after{height:2px}
+.draw::after{width:72px;height:2px}
+.step{padding:38px;background:transparent}
+.step span{border-width:1px;border-radius:0;background:var(--bg)}
+.quote{background:var(--bg2)}
+.quote input,.quote select,.quote textarea{border-radius:2px;background:transparent;border:0;border-bottom:1px solid #3a3a40;padding:14px 2px}
+.quote input:focus,.quote select:focus,.quote textarea:focus{box-shadow:none;border-color:var(--red)}
+.quote select option{background:var(--bg2)}
+.quote label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--mut)}
+.card{padding:30px 32px;background:transparent}
+.brand-icon{border-radius:2px;box-shadow:none}
+.photo-tag,.atelier-photo figcaption{border-radius:0;letter-spacing:.12em;text-transform:uppercase;font-size:9px}
+.faq summary{font-weight:500}
+.band-text p{-webkit-text-stroke:1px rgba(255,255,255,.75);letter-spacing:.02em}
+@media(max-width:760px){.mobile-bar a{border-radius:2px;text-transform:uppercase;letter-spacing:.14em;font-size:12px}.service-card{min-height:420px;padding:28px}.stat{padding:34px 24px}}
